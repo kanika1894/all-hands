@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "allhandsaks-d734"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "allhandsaks-d734"
+  template:
+    metadata:
+      labels:
+        app: "allhandsaks-d734"
+    spec:
+      containers:
+        - name: "allhandsaks-d734"
+          image: "kapasrijkubacr.azurecr.io/allhandsaksd734"
+          ports:
+          - containerPort: 80
