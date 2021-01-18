@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aatiwarishub2aks-c3e3"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aatiwarishub2aks-c3e3"
+  template:
+    metadata:
+      labels:
+        app: "aatiwarishub2aks-c3e3"
+    spec:
+      containers:
+        - name: "aatiwarishub2aks-c3e3"
+          image: "kapasrijkubacr.azurecr.io/aatiwarishub2aksc3e3"
+          ports:
+          - containerPort: 80

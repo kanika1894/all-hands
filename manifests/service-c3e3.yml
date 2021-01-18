@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aatiwarishub2aks-c3e3"
+    labels:
+        app: "aatiwarishub2aks-c3e3"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "aatiwarishub2aks-c3e3"
