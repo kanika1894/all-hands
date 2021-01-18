@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "test101-8fbb"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "test101-8fbb"
+  template:
+    metadata:
+      labels:
+        app: "test101-8fbb"
+    spec:
+      containers:
+        - name: "test101-8fbb"
+          image: "kapasrijkubacr.azurecr.io/test1018fbb"
+          ports:
+          - containerPort: 80
